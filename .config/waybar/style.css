@@ -1,0 +1,109 @@
+* {
+    color: unset;
+    font-weight: bold;
+    font-style: normal;
+    padding: 0px;
+
+    font-size: 16px;
+    font-family: Noto Sans;
+}
+
+window#waybar {
+    background: alpha(#444444, 0.4);
+
+    border-radius: 15px;
+
+    transition:
+        background-color 0.25s linear,
+        color 0.25s linear,
+        border-color 0.5s linear;
+}
+
+#workspaces {
+    padding: 0px 2px;
+    margin: 4px 10px;
+    border-radius: 15px;
+    border: none;
+    background: alpha(darker(#444444), 0.6);
+    color: #eff3f7;
+    transition: all 0.3s linear;
+}
+
+#workspaces button {
+    padding: 0px 5px;
+    margin: 5px 3px;
+    border: 0px;
+    border-radius: 15px;
+    background: transparent;
+
+    transition: 
+        all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+        background 0.3s linear;
+}
+
+#workspaces button.active {
+    color: #eff3f7;
+    background-color: alpha(#222222, 0.6);
+    min-width: 40px;
+
+    transition: 
+        all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+        background 0.3s linear; 
+}
+
+#workspaces button:hover {
+  box-shadow: none; /* Remove predefined box-shadow */
+  text-shadow: none; /* Remove predefined text-shadow */
+  background: none;
+  background-color: alpha(#eff3f7, 0.2);
+  transition: 
+      all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+      background 0.3s linear;
+}
+
+#cpu, #memory, #network, #language {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#network {
+    margin-right: 7px;
+}
+
+#tray {
+    background-color: alpha(darker(#444444), 0.6);
+    border-radius: 15px;
+    margin: 2px 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+}
+
+#clock {
+    border-radius: 15px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#custom-power {
+    font-size: 20px;
+    border-radius: 15px;
+    padding-right: 16px;
+    padding-left: 9px;
+    margin-left: 5px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    transition: all 0.3s linear;
+}
+
+#custom-power:hover {
+    background-color: #eff3f7;
+    color: #1793d1;
+}
+
+tooltip {
+    background-color: alpha(#222222, 0.9);
+    margin: 5px;
+    border-radius: 10px;
+}
