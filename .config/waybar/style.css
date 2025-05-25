@@ -61,13 +61,14 @@ window#waybar {
       background 0.3s linear;
 }
 
-#cpu, #memory, #network, #language {
+#cpu, #memory, #network, #language, #custom-swaync {
     padding-left: 10px;
     padding-right: 10px;
 }
 
-#network {
-    margin-right: 7px;
+#pulseaudio {
+    padding-right: 21px;
+    padding-left: 13px;
 }
 
 #tray {

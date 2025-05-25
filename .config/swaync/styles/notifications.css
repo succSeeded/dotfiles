@@ -1,14 +1,14 @@
-$color-text: #eff3f7;
-$color-background-alt: #444444;
-$color-selected: #444444;
-$color-hover: #444444;
-$color-urgent  #444444;
+@define-color color-text #eff3f7;
+@define-color color-background-alt #444444;
+@define-color color-selected #888888;
+@define-color color-hover #888888;
+@define-color color-urgent  #444444;
 
-$color-main: #444444;
-$color-bg: alpha(@main-color, 0.8);
+@define-color color-main #eff3f7;
+@define-color color-bg alpha(#777777, 0.4);
 
 * {
-  color: $color-text;
+  color: @color-text;
 
   all: unset;
   transition: 200ms;
@@ -16,16 +16,16 @@ $color-bg: alpha(@main-color, 0.8);
 
 .notification-row {
   outline: none;
-  margin: 0;
+  margin: 0px;
   padding: 0px;
 }
 
 .floating-notifications.background .notification-row .notification-background {
-  background: $color-bg;
-  border: 2px solid $color-bg;
-  border-radius: 6px;
+  background: @color-bg;
+  border: 0px;
+  border-radius: 15px;
   margin: 16px;
-  padding: 0;
+  padding: 0px;
   transition: background 0.15s ease-in-out;
 }
 
@@ -43,29 +43,29 @@ $color-bg: alpha(@main-color, 0.8);
 }
 
 .floating-notifications.background .notification-row .notification-background .notification .notification-content {
-  margin: 10px;
+  margin: 10px 10px 10px 20px;
 }
 
 .floating-notifications.background .notification-row .notification-background .notification > *:last-child > * {
-  min-height: 10px;
+  min-height: 3.0em;
 }
 
 .floating-notifications.background .notification-row .notification-background .notification > *:last-child > * .notification-action {
-  border-radius: 8px;
-  background-color: $color-bg;
-  margin: 6px;
-  border: 1px solid transparent;
+  border-radius: 0px 0px 8px 8px;
+  background-color: @color-bg;
+  margin: 0px;
+  border: 0px;
   transition: background 0.15s ease-in-out;
 }
 
 .floating-notifications.background .notification-row .notification-background .notification > *:last-child > * .notification-action:hover {
-  background-color: $color-hover;
-  border: 1px solid $color-selected;
+  background-color: @color-hover;
+  border: 0px;
 }
 
 .floating-notifications.background .notification-row .notification-background .notification > *:last-child > * .notification-action:active {
-  background-color: $color-selected;
-  color: $color-background-alt;
+  background-color: @color-selected;
+  color: @color-background-alt;
 }
 
 .image {
@@ -77,7 +77,7 @@ $color-bg: alpha(@main-color, 0.8);
   font-family: Noto Sans;
   font-weight: bold;
   font-size: 18px;
-  color: $color-main;
+  color: @color-main;
   padding-bottom: 3px;
 }
 
@@ -90,25 +90,25 @@ $color-bg: alpha(@main-color, 0.8);
 .floating-notifications.background .notification-row .notification-background .close-button {
   margin: 6px;
   padding: 2px;
-  border-radius: 6px;
-  background-color: $color-bg;
-  border: 1px solid $color-bg;
+  border-radius: 10px;
+  background: none;
+  border: 0px;
 }
 
 .floating-notifications.background .notification-row .notification-background .close-button:hover {
-  background-color: $color-selected;
+  background-color: alpha(@color-selected, 0.6);
 }
 
 .floating-notifications.background .notification-row .notification-background .close-button:active {
-  background-color: $color-selected;
-  color: $color-background;
+  background-color: alpha(@color-selected, 0.6);
+  color: @color-background;
 }
 
 .notification.critical progress {
-  background-color: $color-selected;
+  background-color: @color-selected;
 }
 
 .notification.low progress,
 .notification.normal progress {
-  background-color: $color-selected;
+  background-color: @color-selected;
 }
