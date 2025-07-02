@@ -1,11 +1,11 @@
 configuration {
-	modi:				  "drun";
+	modi:				          "drun";
 	show-icons:           true;
-    font:                 "Futura Std 14";
-	icon-theme: 		  "Reversal-dark";
-	display-drun: 		  "";
+  font:                 "Futura Std 14";
+	icon-theme: 		      "Reversal-dark";
+	display-drun: 		    "";
 	drun-display-format:  "{name}";
-	sidebar-mode: 		  false;
+	sidebar-mode: 		    false;
 }
 
 @theme "/dev/null"
@@ -22,15 +22,15 @@ configuration {
 
 window {
 	border-radius:  15px;
-	width:			45%;
-    height:         50%;
-	padding: 		16px;
-    border:         1px solid;
-    border-color:   @fg;
+	width:			    45%;
+  height:         50%;
+	padding: 		    16px;
+  border:         1px solid;
+  border-color:   @fg;
 }
 
 prompt {
-    placeholder:        " ";
+  placeholder:        " ";
 	background-color:   transparent;
 	enabled:			true;
 	padding:			0% 32px 0% 0%;
@@ -94,7 +94,7 @@ element-text {
 }
 
 element-text, element-icon {
-  text-color:		  inherit;
+  text-color:		      inherit;
   background-color:   transparent;
 }
 

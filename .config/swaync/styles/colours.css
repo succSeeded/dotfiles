@@ -1,0 +1,13 @@
+$cc-bg: rgba(122, 146, 160, 0.7);
+$noti-border-color: rgba(239, 243, 247, 1.0);
+$noti-bg: rgba(122, 146, 160, 1.0);
+$noti-bg-opaque: rgb(122, 146, 160);
+$noti-bg-darker: rgb(122, 146, 160);
+$noti-bg-hover: rgb(122, 146, 160);
+$noti-bg-hover-opaque: rgb(122, 146, 160);
+$noti-bg-focus: rgba(122, 146, 160, 1.0);
+$noti-close-bg: rgba(255, 255, 255, 0.1);
+$noti-close-bg-hover: rgba(255, 255, 255, 0.15);
+$text-color: rgb(239, 243, 247);
+$text-color-disabled: rgb(239, 243, 247);
+$bg-selected: rgb(122, 146, 160);1

@@ -1,11 +1,11 @@
 configuration {
-	modi:				  "drun";
+	modi:				          "drun";
 	show-icons:           true;
-    font:                 "Futura Std 24";
-	icon-theme: 		  "Reversal-dark";
-	display-drun: 		  "";
+  font:                 "Futura Std 24";
+	icon-theme: 		      "Reversal-dark";
+	display-drun: 		    "";
 	drun-display-format:  "{name}";
-	sidebar-mode: 		  false;
+	sidebar-mode: 		    false;
 }
 
 @theme "/dev/null"
@@ -17,14 +17,14 @@ configuration {
 	button:				rgba(170, 170, 170, 0.4);
 
 	background-color:	@bg;
-	text-color:			@fg;
+	text-color:			  @fg;
 }
 
 window {
   border-radius:      15px;
-  width:			  25%;
+  width:			        25%;
   height:             50%;
-  padding: 			  16px;
+  padding: 			      16px;
   border:             1px solid;
   border-color:       @fg;
 }

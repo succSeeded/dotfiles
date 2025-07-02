@@ -46,7 +46,6 @@ window#waybar {
     color: darker(#444444);
     background-color: #eff3f7;
     min-width: 40px;
-
     transition: 
         all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55),
         background 0.3s linear; 
