@@ -7,33 +7,32 @@
 @define-color urgent          #444444;
 
 * {
-  color:            @text;
-
-  all: unset;
-  font-size: 14px;
-  font-family: "Noto Sans 11";
-  transition: 200ms;
+  color:        @text;
+  all:          unset;
+  font-size:    14px;
+  font-family:  "Futura Std";
+  transition:   linear 200ms;
 
 }
 
 /* CONTROL CENTER ------------------------------------------------------------------------ */
 
 .control-center {
-  background: alpha(@background, .1);
-  border-radius: 24px;
-  border: 1px solid @selected;
-  box-shadow: 0 0 0 0 rgba(0,0,0,.6);
-  padding: 12px;
-  margin: 18px;
+  background:     alpha(@background, .6);
+  border-radius:  0.8em;
+  border:         1px solid @selected;
+  box-shadow:     0 0 0 0 rgba(0,0,0,.6);
+  padding:        12px;
+  margin:         18px;
 }
 
 /* Notifications  */
 .control-center .notification-row .notification-background,
 .control-center .notification-row .notification-background .notification.critical {
   background-color: @background-alt;
-  border-radius: 8px;
-  margin: 4px 0px;
-  padding: 0px;
+  border-radius:    8px;
+  margin:           4px 0px;
+  padding:          0px;
 }
 
 .control-center .notification-row .notification-background .notification.critical {
@@ -41,8 +40,8 @@
 }
 
 .control-center .notification-row .notification-background .notification .notification-content {
-  margin: 6px;
-  padding: 8px 6px 2px 2px;
+  margin:   6px;
+  padding:  8px 6px 2px 2px;
 }
 
 .control-center .notification-row .notification-background .notification > *:last-child > * {
@@ -50,10 +49,10 @@
 }
 
 .control-center .notification-row .notification-background .notification > *:last-child > * .notification-action {
-  background: alpha(@selected, .6);
-  color: @text;
-  border-radius: 0px 0px 8px 8px;
-  margin: 0px;
+  background:     alpha(@selected, .6);
+  color:          @text;
+  border-radius:  0px 0px 8px 8px;
+  margin:         0px;
 }
 
 .control-center .notification-row .notification-background .notification > *:last-child > * .notification-action:hover {
@@ -67,11 +66,11 @@
 /* Buttons */
 
 .control-center .notification-row .notification-background .close-button {
-  background: transparent;
-  border-radius: 10px;
-  color: @text;
-  margin: 0px;
-  padding: 4px;
+  background:     transparent;
+  border-radius:  10px;
+  color:          @text;
+  margin:         0px;
+  padding:        4px;
 }
 
 .control-center .notification-row .notification-background .close-button:hover {
@@ -85,27 +84,27 @@
 /* Sliders */
 
 scale {
-    margin: 0px 1em 0px 1em;
-    padding: 0px;
+    margin:   0px 1em 0px 1em;
+    padding:  0px;
 }
 
 scale trough {
   background-color: @background-sec;
-  border-radius: .8rem;
+  border-radius:    0.8em;
 }
 
 scale highlight {
   background-color: #90D5FF;
-  border-radius: .8rem;
-  min-height: 1rem;
+  border-radius:    0.8em;
+  min-height:       1em;
 }
 
 scale slider {
-  margin: -10px;
-  padding: 0px;
-  border-radius: 2em;
-  min-width: 1rem;
-  min-height: 1rem;
+  margin:           -10px;
+  padding:          0px;
+  border-radius:    2em;
+  min-width:        1em;
+  min-height:       1em;
   background-color: transparent;
 }
 
@@ -116,9 +115,9 @@ scale slider {
 
 }
 .notification-group-headers {
-  font-weight: bold;
-  font-size: 1.25rem;
-  color: @text;
+  font-weight:    bold;
+  font-size:      1.25rem;
+  color:          @text;
   letter-spacing: 2px;
 }
 
@@ -128,11 +127,11 @@ scale slider {
 
 .notification-group-collapse-button,
 .notification-group-close-all-button {
-  background: transparent;
-  color: @text;
-  margin: 4px; 
-  border-radius: 6px;
-  padding: 4px;
+  background:     transparent;
+  color:          @text;
+  margin:         4px; 
+  border-radius:  6px;
+  padding:        4px;
 }
 
 .notification-group-collapse-button:hover,
@@ -144,38 +143,37 @@ scale slider {
 
   /* Notification clear button */
 .widget-title {
-  font-size: 1.2em;
-  margin: 6px;
+  font-size:  1.2em;
+  margin:     6px;
 }
 
 .widget-title button {
-  background: @background-alt;
-  border-radius: 6px;
-  padding: 4px 16px;
+  background:     transparent;
+  padding:        4px 1.35em;
 }
 
 .widget-title button:hover {
-  background-color: @hover;
+  background-color: transparent;
 }
 
 .widget-title button:active {
-  background-color: @selected;
+  background-color: transparent;
 }
 
   /* Do not disturb */
 .widget-dnd {
-  margin: 6px;
-  font-size: 1.2rem;
+  margin:     6px;
+  font-size:  1.2rem;
 }
 
 .widget-dnd > switch {
-  background: @background-alt;
-  font-size: initial;
-  border-radius: 8px;
-  box-shadow: none;
-  padding: 2px;
-  min-height: 1.2em;
-  min-width: 3.0em;
+  background:     @background-alt;
+  font-size:      initial;
+  border-radius:  0.8em;
+  box-shadow:     none;
+  padding:        2px;
+  min-height:     1.2em;
+  min-width:      3.0em;
 }
 
 .widget-dnd > switch:hover {
@@ -191,29 +189,34 @@ scale slider {
 }
 
 .widget-dnd > switch slider {
-  background: @text;
-  border-radius: 6px;
+  background:     @text;
+  border-radius:  0.8em;
+  min-width:      1.6em;
 }
 
   /* Music player */
 .widget-mpris {
-    background: transparent;
-    border-radius: 16px;
-    color: @text;
-    margin:  1px;
+    background:     transparent;
+    border-radius:  16px;
+    color:          @text;
+    margin:         1px;
 }
 
   /* NOTE: Background need *opacity 1* otherwise will turn into the album art blurred  */
 .widget-mpris-player {
-    background-color: @background-sec;
-    border-radius: 22px;
-    padding: 6px 14px;
-    margin: 6px;
+    background-color: alpha(@background-sec, 0.6);
+    border-radius:    22px;
+    padding:          6px 14px;
+    margin:           6px;
+}
+
+.widget-mpris > box {
+  margin: -5px 0px -10px 0px;
 }
 
 .widget-mpris > box > button {
-  color: @text;
-  border-radius: 20px;
+  color:          @text;
+  border-radius:  20px;
 }
  
 .widget-mpris button {
@@ -224,25 +227,45 @@ scale slider {
   color: @text;
 }
 
+/* Player button box */
+.widget-mpris > box > carousel > widget > box > box:nth-child(2) {
+  margin: 5px 0px -0.1em 11.5em;
+}
+
+/* Player buttons */
+.widget-mpris > box > carousel > widget > box > box:nth-child(2) > button {
+  border-radius: 4px;
+}
+.widget-mpris > box > carousel > widget > box > box:nth-child(2) > button:hover {
+  background: alpha(currentColor, 0.1);
+}
+
+carouselindicatordots {
+  opacity: 0;
+}
+
 .widget-mpris-album-art {
-  border-radius: 16px;
+  border-radius: 0.8em;
 }
  
 .widget-mpris-title {
-    font-weight: 700;
-    font-size: 1rem;
+  font-weight:  bold;
+  font-size:    1rem;
 }
  
 .widget-mpris-subtitle {
-    font-weight: 500;
-    font-size: 0.8rem;
+  font-size: 0.8rem;
+}
+
+.widget-mpris-player > box > image {
+  margin: 0px 0px -2.5em 0px;
 }
 
 /* Volume */
 .widget-volume {
-  background: transparent;
-  color: @text;
-  padding: 4px;
-  margin: 6px;
-  border-radius: 6px;
+  background:     transparent;
+  color:          @text;
+  padding:        4px;
+  margin:         6px;
+  border-radius:  6px;
 }

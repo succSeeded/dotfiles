@@ -10,14 +10,14 @@
 * {
   color: @color-text;
 
-  all: unset;
-  transition: 200ms;
+  all:        unset;
+  transition: linear 200ms;
 }
 
 .notification-row {
-  outline: none;
-  margin: 0px;
-  padding: 0px;
+  outline:  none;
+  margin:   0px;
+  padding:  0px;
 }
 
 .floating-notifications.background .notification-row .notification-background {
@@ -74,25 +74,25 @@
 }
 
 .summary {
-  font-family: Noto Sans;
-  font-weight: bold;
-  font-size: 18px;
-  color: @color-main;
+  font-family:    "Futura Std";
+  font-weight:    bold;
+  font-size:      18px;
+  color:          @color-main;
   padding-bottom: 3px;
 }
 
 .body {
-  font-size: 14px;
-  font-family: Noto Sans;
-  font-weight: bold;
+  font-size:    14px;
+  font-family:  "Futura Std";
+  font-weight:  bold;
 }
 
 .floating-notifications.background .notification-row .notification-background .close-button {
-  margin: 6px;
-  padding: 2px;
-  border-radius: 10px;
-  background: none;
-  border: 0px;
+  margin:         6px;
+  padding:        2px;
+  border-radius:  10px;
+  background:     none;
+  border:         0px;
 }
 
 .floating-notifications.background .notification-row .notification-background .close-button:hover {
@@ -101,7 +101,7 @@
 
 .floating-notifications.background .notification-row .notification-background .close-button:active {
   background-color: alpha(@color-selected, 0.6);
-  color: @color-background;
+  color:            @color-background;
 }
 
 .notification.critical progress {
