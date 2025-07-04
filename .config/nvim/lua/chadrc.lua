@@ -7,19 +7,18 @@ local M = {}
 
 M.base46 = {
 	theme = "aylin",
-  -- changed_themes = {},
-	-- hl_override = {
-	-- 	Comment = { italic = true },
-	-- 	["@comment"] = { italic = true },
-	-- },
+  transparency = true,
+	hl_override = {
+	  Comment = { italic = true },
+	  ["@comment"] = { italic = true },
+	},
 }
 
-M.nvdash = { load_on_startup = true }
-M.ui = {
-  transparency = true,
+-- M.nvdash = { load_on_startup = true }
+-- M.ui = {
 --       tabufline = {
 --          lazyload = false
 --      }
-}
+--}
 
 return M

@@ -1,37 +1,15 @@
 return {
   {
     "stevearc/conform.nvim",
-    -- event = 'BufWritePre', -- uncomment for format on save
-    config = function()
-    local conform = require("configs.conform")
-
-    conform.setup({
-      formatters_by_ft = {
-        css = { "prettier" },
-        html = { "prettier" },
-        json = { "prettier" },
-        yaml = { "prettier" },
-        markdown = { "prettier" },
-        lua = { "stylua" },
-        python = { "isort", "black" },
-      },
-      format_on_save = {
-        lsp_fallback = true,
-        async = false,
-        timeout_ms = 1000,
-      },
-    })
-
-    vim.keymap.set({ "n", "v" }, "<leader>f", function()
-      conform.format({
-        lsp_fallback = true,
-          async = false,
-          timeout_ms = 1000,
-      })
-      end, { desc = "Format file or range (in visual mode)" })
-    end,
+    event = "BufWritePre", -- uncomment for format on save
+    opts = require "configs.conform",
   },
-
+  -- Cool editing prompts
+  {
+    "stevearc/dressing.nvim",
+    lazy = false,
+    opts = {},
+  },
   -- These are some examples, uncomment them if you want to see them work!
   {
     "neovim/nvim-lspconfig",
@@ -39,18 +17,44 @@ return {
       require "configs.lspconfig"
     end,
   },
-
+  -- test new blink
+  -- { import = "nvchad.blink.lazyspec" },
   {
-    "kylechui/nvim-surround",
-    version = "^3.0.0", -- Use for stability; omit to use `main` branch for the latest features
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "vim",
+        "lua",
+        "vimdoc",
+        "html",
+        "css",
+        "cpp",
+        "python",
+      },
+    },
+  },
+  {
+    "williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        "pyright",
+        "black",
+        "prettier",
+        "stylua",
+        "clangd",
+        "clang-format",
+        "html-lsp",
+        "css-lsp",
+      },
+    },
+  },
+  {
+    "mfussenegger/nvim-lint",
     event = "VeryLazy",
     config = function()
-        require("nvim-surround").setup({
-            -- Configuration here, or leave empty to use defaults
-        })
-    end
+      require "configs.lint"
+    end,
   },
-
   {
     "hat0uma/csvview.nvim",
     ---@module "csvview"
@@ -73,20 +77,13 @@ return {
     },
     cmd = { "CsvViewEnable", "CsvViewDisable", "CsvViewToggle" },
   },
-
   {
-    'nvim-telescope/telescope.nvim',
-    tag = '0.1.8',
-    dependencies = { 'nvim-lua/plenary.nvim' }
+    "lervag/vimtex",
+    lazy = false, -- we don't want to lazy load VimTeX
+    -- tag = "v2.15", -- uncomment to pin to a specific release
+    init = function()
+      -- VimTeX configuration goes here, e.g.
+      vim.g.vimtex_view_method = "zathura"
+    end,
   },
-
-  -- {
-  -- 	"nvim-treesitter/nvim-treesitter",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"vim", "lua", "vimdoc",
-  --      "html", "css"
-  -- 		},
-  -- 	},
-  -- },
 }
