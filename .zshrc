@@ -9,4 +9,5 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+STARSHIP_CONFIG="$HOME/.config/starship.toml"
 eval "$(starship init zsh)"

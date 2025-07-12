@@ -206,7 +206,7 @@ disabled = true
 
 [shell] #      _ |
 format = '[ ](bold 248)[$indicator]($style) '
-style = 'bold bright-blue'
+style = 'bold 2'
 unknown_indicator = 'shell'
 powershell_indicator = 'powershell'
 fish_indicator = 'fish'
@@ -216,7 +216,7 @@ disabled = false
 
 [username]
 #           |
-format = '[ ](bold 248)[$user]($style)'
+format = '[ ](bold 248)[$user]($style)'
 style_user = 'bold yellow'
 style_root = 'bold red'
 show_always = true
@@ -232,7 +232,7 @@ aliases = { "loganmac.local" = "mac" }
 disabled = false
 
 [character]
-format = '$symbol '
+format = ' $symbol '
 #success_symbol = '[](fg:bold light_green)'
 #success_symbol = '[☍](fg:bold light_green)'
 #success_symbol = '[☡](fg:bold light_green)'
