@@ -191,10 +191,10 @@ disabled = true
 [sudo]
 #           |
 format = '[$symbol]($style)'
-symbol = ' '
+symbol = '  '
 style = 'bold 9'
 allow_windows = true
-disabled = true
+disabled = false
 
 [time]
 #  🕙                  |
@@ -205,7 +205,7 @@ use_12hr = false
 disabled = true
 
 [shell] #      _ |
-format = '[ ](bold 248)[$indicator]($style) '
+format = '[ ](bold 248)[ $indicator]($style) '
 style = 'bold 2'
 unknown_indicator = 'shell'
 powershell_indicator = 'powershell'
