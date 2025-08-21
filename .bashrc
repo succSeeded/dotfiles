@@ -10,3 +10,4 @@ alias grep='grep --color=auto'
 
 eval "$(starship init bash)"
 
+. "$HOME/.cargo/env"
