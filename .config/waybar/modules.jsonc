@@ -71,7 +71,7 @@
     "network": {
         "interval": 30,
         "format-wifi": " ", // Icon: wifi
-        "format-ethernet": "{ipaddr}/{cidr}", // Icon: ethernet
+        "format-ethernet": "󰈀 ", // Icon: ethernet
         "format-linked": "{ifname} (No IP)",
         "format-disconnected": "󰖪 ",
         "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({bandwidthDownBytes})</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>",

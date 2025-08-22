@@ -11,7 +11,7 @@ configuration {
 @theme "/dev/null"
 
 * {
-	bg:				    rgba(20, 20, 20, 0.6);
+	bg:				    rgba(36, 38, 46, 0.6);
 	fg:				    #eff3f7;
 	accent:				#645896;
 	button:				rgba(170, 170, 170, 0.4);
@@ -22,8 +22,7 @@ configuration {
 
 window {
 	border-radius:  15px;
-	width:			    45%;
-  height:         50%;
+	width:			    30%;
 	padding: 		    16px;
   border:         1px solid;
   border-color:   @fg;
@@ -32,13 +31,13 @@ window {
 prompt {
   placeholder:        " ";
 	background-color:   transparent;
-	enabled:			true;
-	padding:			0% 32px 0% 0%;
-	font:				"Futura Std 16";
+	enabled:			      true;
+	padding:			      0% 32px 0% 0%;
+	font:				        "Futura Std 16";
 }
 
 entry {
-  placeholder:		  "";
+  placeholder:		    "";
   background-color:   transparent;
   placeholder-color:  @fg;
   expand:             true;
@@ -55,8 +54,8 @@ inputbar {
 }
 
 listview {
-  columns:            2;
-  lines:	          6;
+  columns:            1;
+  lines:	            5;
   cycle:              false;
   dynamic:            true;
   layout:             vertical;
@@ -64,7 +63,7 @@ listview {
   horizontal-align:   0.5;
   vertical-align:     0.5;
   position:           center;
-  padding:            0 0 0 10px;
+  padding:            none;
 }
 
 mainbox {

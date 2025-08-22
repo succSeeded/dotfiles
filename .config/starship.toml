@@ -70,8 +70,8 @@ format = '[   $path]($style)[$read_only]($read_only_style) '
 style = 'bold bright-cyan'
 read_only_style = 'red'
 home_symbol = "~"
-truncation_symbol = '…/'
-truncation_length = 3
+truncation_symbol = '.../'
+truncation_length = 4
 read_only = ' 🔒'
 use_os_path_sep = true
 #fish_style_pwd_dir_length = 1
@@ -89,7 +89,7 @@ always_show_remote = false
 disabled = false
 
 [git_status]
-format = '([\[$all_status$ahead_behind\]]($style)) '
+format = '( [\[$all_status$ahead_behind\]]($style) ) '
 style = 'bold red'
 # untracked:'?'; staged:'+'; modified:'!'; deleted:'x';
 #windows_starship = '/mnt/c/Users/username/scoop/apps/starship/current/starship.exe'
@@ -118,68 +118,13 @@ style = 'bold yellow'
 min_time = 2000
 show_milliseconds = false
 
-[java]
-# ⚰︎ ♲ ⇞ ⚕︎ ☥ º                                 |
-format = '[ ](bold green)[${symbol}(${version} )]($style)'
-symbol = 'Java'
-style = 'bright-purple'
-detect_extensions = ['java', 'class', 'gradle', 'jar', 'cljs', 'cljc']
-detect_files = ['pom.xml', 'build.gradle.kts', 'build.sbt', '.java-version', 'deps.edn', 'project.clj', 'build.boot', '.sdkmanrc']
-version_format = '${major}.${minor}'
-disabled = false
-
 [python]
 format = '[ ](bold green)[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style) '
-symbol = 'PY' # 󰌠  🐍 👾  |
+symbol = '󰌠 ' # 󰌠  🐍 👾  |
 style = 'bright-purple'
 #detect_files = [['.python-version', 'Pipfile', '__init__.py', 'pyproject.toml', 'requirements.txt', 'setup.py', 'tox.ini', 'pixi.toml']]
 version_format = '${major}.${minor}'
 disabled = false
-
-[nodejs]
-format = '[ ](bold green)[$symbol($version)]($style) '
-symbol = 'Node'
-style = 'bright-purple'
-#detect_extensions = []
-detect_files = ['package.json', '.node-version', '.nvmrc']
-detect_folders = ['node_modules']
-not_capable_style = 'red'
-version_format = '${major}.${minor}'
-disabled = false
-
-[c]
-format = '[ ](bold green)[$symbol]($style)[$version(\($name\))]($style) '
-symbol = 'C' #    |
-style = 'bright-purple'
-detect_extensions = ['c', 'h']
-#commands = [['cc', '--version'], ['gcc', '--version'], ['clang', '--version']]
-version_format = '${major}.${minor}'
-disabled = false
-
-[bun]
-format = '[ ](bold green)[$symbol($version)]($style) '
-symbol = 'Bun'
-style = 'bright-purple'
-detect_files = ['bun.lockb', 'bunfig.toml']
-version_format = '${major}.${minor}'
-disabled = true
-
-[dotnet]
-format = '[ ](bold green)[$symbol($version)(\($tfm\))]($style) '
-symbol = '.NET'
-style = 'bright-purple'
-detect_extensions = ['csproj', 'fsproj', 'xproj']
-detect_files = ['global.json', 'project.json', 'Directory.Build.props', 'Directory.Build.targets', 'Packages.props']
-version_format = '${major}.${minor}'
-disabled = true
-
-[deno]
-format = '[ ](bold green)[$symbol($version)]($style) '
-symbol = 'Deno'
-style = 'bright-purple'
-detect_files = ['deno.json', 'deno.jsonc', 'deno.lock', 'mod.ts', 'mod.js', 'deps.ts', 'deps.js']
-version_format = '${major}.${minor}'
-disabled = true
 
 [aws]
 # 'on [$symbol($profile )(\($region\) )(\[$duration\] )]($style)'
