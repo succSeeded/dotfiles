@@ -1,120 +1,140 @@
 * {
-    color: unset;
-    font-weight: bold;
-    font-style: normal;
-    padding: 0px;
+  color: unset;
+  font-weight: bold;
+  font-style: normal;
+  padding: 0px;
 
-    font-size: 16px;
-    font-family: Noto Sans;
+  font-size: 16px;
+  font-family: Futura Std Light;
 }
 
 window#waybar {
-    background: alpha(#444444, 0.4);
+  background: alpha(#444444, 0.4);
+  border-radius: 15px;
 
-    border-radius: 15px;
-
-    transition:
-        background-color 0.25s linear,
-        color 0.25s linear,
-        border-color 0.5s linear;
+  transition:
+    background-color 0.25s linear,
+    color 0.25s linear,
+    border-color 0.5s linear;
 }
 
 #workspaces {
-    padding: 0px 2px;
-    margin: 4px 10px;
-    border-radius: 15px;
-    min-width: 152px;
-    border: none;
-    background: alpha(darker(#444444), 0.6);
-    color: #eff3f7;
-    transition: all 0.3s linear;
+  padding: 0px 2px;
+  margin: 4px 10px;
+  border-radius: 15px;
+  border: none;
+  background: alpha(darker(#444444), 0.6);
+  color: #eff3f7;
+  transition: all 0.3s linear;
+}
+
+#workspaces label {
+  font-size: 11px;
 }
 
 #workspaces button {
-    padding: 0px 5px;
-    margin: 5px 3px;
-    border: 0px;
-    border-radius: 15px;
-    background: transparent;
+  padding: 0px 5px;
+  margin: 5px 3px;
+  border: 0px;
+  border-radius: 15px;
+  min-width: 20px;
+  background: transparent;
 
-    transition: 
-        all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55),
-        background 0.3s linear;
+  transition:
+    all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+    background 0.3s linear;
 }
 
 #workspaces button.active {
-    color: darker(#444444);
-    background-color: #eff3f7;
-    min-width: 40px;
-    transition: 
-        all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55),
-        background 0.3s linear; 
+  text-shadow: 0px 0px 4px rgba(250, 250, 250, 0.6);
+
+  transition: all 0.3s linear;
+}
+
+#workspaces button.urgent {
+  color: #fcb001;
+
+  transition: all 0.3s linear;
 }
 
 #workspaces button.active:hover {
-    color: darker(#444444);
-    background-color: #eff3f7;
-    min-width: 40px;
+  box-shadow: none;
+  text-shadow: 0px 0px 4px rgba(250, 250, 250, 0.6);
 
-    transition: 
-        all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55),
-        background 0.3s linear; 
+  transition: all 0.3s linear;
+}
+
+#workspaces button.urgent:hover {
+  text-shadow: 0px 0px 4px rgba(252, 176, 1, 0.6);
+
+  transition: all 0.3s linear;
 }
 
 #workspaces button:hover {
-  box-shadow: none; /* Remove predefined box-shadow */
-  text-shadow: none; /* Remove predefined text-shadow */
-  background: none;
-  background-color: alpha(#eff3f7, 0.2);
-  transition: 
-      all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55),
-      background 0.3s linear;
+  box-shadow: none;
+  text-shadow: 0px 0px 2px rgba(252, 252, 252, 0.8);
+
+  transition: all 0.3s linear;
 }
 
-#cpu, #memory, #network, #language, #custom-swaync {
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-#pulseaudio {
-    padding-right: 21px;
-    padding-left: 13px;
-}
-
-#tray {
-    background-color: alpha(darker(#444444), 0.6);
-    border-radius: 15px;
-    margin: 2px 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 1px;
+#cpu,
+#memory,
+#network,
+#language,
+#pulseaudio,
+#network {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 #clock {
-    border-radius: 15px;
+  padding-top: 3px;
+}
 
-    padding-left: 10px;
-    padding-right: 10px;
+#language {
+  padding-top: 1px;
+}
+
+#custom-swaync {
+  padding-left: 5px;
+  padding-right: 25px;
+}
+
+#tray {
+  background-color: alpha(darker(#444444), 0.6);
+  border-radius: 15px;
+  margin: 2px 5px;
+  padding: 1px 10px 0px 10px;
 }
 
 #custom-power {
-    font-size: 20px;
-    border-radius: 15px;
-    padding-right: 16px;
-    padding-left: 9px;
-    margin-left: 5px;
-    margin-top: 3px;
-    margin-bottom: 3px;
-    transition: all 0.3s linear;
+  font-size: 20px;
+  border-radius: 15px;
+
+  padding-right: 16px;
+  padding-left: 9px;
+
+  margin: 3px 0px 3px 5px;
+  transition: all 0.3s linear;
 }
 
 #custom-power:hover {
-    background-color: #eff3f7;
-    color: #1793d1;
+  background-color: #eff3f7;
+  color: #1793d1;
 }
 
 tooltip {
-    background-color: alpha(#222222, 0.9);
-    margin: 5px;
-    border-radius: 10px;
+  background: none;
+  border: none;
+  margin: 5px;
+}
+
+tooltip label {
+  font-family: Iosevka Nerd Font;
+  font-size: 16px;
+
+  background-color: rgba(36, 38, 46, 0.8);
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 10px;
 }

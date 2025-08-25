@@ -31,38 +31,38 @@ style = 'bold white'
 disabled = true
 
 [os.symbols]
-Alpine = ''
-Amazon = ''
-Android = ''
-Arch = ''
-CentOS = ''
-Debian = ''
-EndeavourOS = ''
-Fedora = ''
-FreeBSD = ''
-Garuda = ''
-Gentoo = ''
-Linux = ''
-Macos = ''
-Manjaro = ''
-Mariner = ''
-Mint = ''
-NetBSD = ''
-NixOS = ''
-OpenBSD = ''
-OpenCloudOS = ''
-openEuler = ''
-openSUSE = ''
+Alpine = ' '
+Amazon = ' '
+Android = ' '
+Arch = ' '
+CentOS = ' '
+Debian = ' '
+EndeavourOS = ' '
+Fedora = ' '
+FreeBSD = ' '
+Garuda = ' '
+Gentoo = ' '
+Linux = ' '
+Macos = ' '
+Manjaro = ' '
+Mariner = ' '
+Mint = ' '
+NetBSD = ' '
+NixOS = ' '
+OpenBSD = ' '
+OpenCloudOS = ' '
+openEuler = ' '
+openSUSE = ' '
 OracleLinux = '⊂⊃'
-Pop = ''
-Raspbian = ''
-Redhat = ''
-RedHatEnterprise = ''
-Solus = ''
-SUSE = ''
-Ubuntu = ''
-Unknown = ''
-Windows = ''
+Pop = ' '
+Raspbian = ' '
+Redhat = ' '
+RedHatEnterprise = ' '
+Solus = ' '
+SUSE = ' '
+Ubuntu = ' '
+Unknown = ' '
+Windows = ' '
 
 [directory]
 #   📂     |
@@ -74,7 +74,6 @@ truncation_symbol = '.../'
 truncation_length = 4
 read_only = ' 🔒'
 use_os_path_sep = true
-#fish_style_pwd_dir_length = 1
 truncate_to_repo = true
 
 [git_branch]
@@ -91,6 +90,11 @@ disabled = false
 [git_status]
 format = '( [\[$all_status$ahead_behind\]]($style) ) '
 style = 'bold red'
+untracked ='?'
+staged ='+'
+modified = '!'
+deleted = 'x'
+
 # untracked:'?'; staged:'+'; modified:'!'; deleted:'x';
 #windows_starship = '/mnt/c/Users/username/scoop/apps/starship/current/starship.exe'
 
@@ -143,17 +147,17 @@ disabled = false
 
 [time]
 #  🕙                  |
-format = '[ ](bold 248)[$time]($style) '
+format = '[](bold 248)[  $time]($style) '
 style = 'bold bright-cyan'
 time_format = '%H:%M'
 use_12hr = false
-disabled = true
+disabled = true 
 
 [shell] #      _ |
-format = '[ ](bold 248)[ $indicator]($style) '
-style = 'bold 2'
-unknown_indicator = 'shell'
-powershell_indicator = 'powershell'
+format = '[  $indicator]($style) '
+style = 'bold blue'
+unknown_indicator = '???'
+powershell_indicator = 'pwsh'
 fish_indicator = 'fish'
 bash_indicator = 'bash'
 zsh_indicator = 'zsh'
@@ -161,7 +165,7 @@ disabled = false
 
 [username]
 #           |
-format = '[ ](bold 248)[$user]($style)'
+format = '[ $user]($style)'
 style_user = 'bold yellow'
 style_root = 'bold red'
 show_always = true

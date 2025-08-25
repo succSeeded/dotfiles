@@ -21,11 +21,11 @@
         "on-click": "activate",
         "active-only": false,
         "all-outputs": true,
-        "format": "{}",
+        "format": "{icon}",
         "format-icons": {
-            "urgent": "",
-            "active": "",
-            "default": ""
+            "urgent": "",
+            "active": "",
+            "default": ""
         },
         "persistent-workspaces": {
             "*": 4
@@ -55,7 +55,7 @@
             "warning": 70,
             "critical": 90
         },
-        "on-click": "kitty htop"
+        "on-click": "kitty btop"
     },
 
     "memory": {
@@ -65,13 +65,13 @@
             "warning": 70,
             "critical": 90
         },
-        "on-click": "kitty htop"
+        "on-click": "kitty btop"
     },
 
     "network": {
         "interval": 30,
-        "format-wifi": " ", // Icon: wifi
-        "format-ethernet": "󰈀 ", // Icon: ethernet
+        "format-wifi": "", // Icon: wifi
+        "format-ethernet": "󰈀", // Icon: ethernet
         "format-linked": "{ifname} (No IP)",
         "format-disconnected": "󰖪 ",
         "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({bandwidthDownBytes})</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>",
@@ -100,7 +100,7 @@
     },
 
     "custom/swaync": {
-        "format": " ",
+        "format": "",
         "tooltip": false,
         "on-click": "swaync-client -t"
     },
