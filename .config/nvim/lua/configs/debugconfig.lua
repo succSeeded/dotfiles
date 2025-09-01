@@ -1,19 +1,19 @@
-local dap = require "dap"
-local ui = require "dapui"
-local os_module = require "os"
+local dap = require("dap")
+local ui = require("dapui")
+local os_module = require("os")
 
-require("dapui").setup {}
-require("dap-python").setup(os_module.getenv "HOME" .. "/pyvenvs/debug3.11/bin/python3")
+require("dapui").setup({})
+require("dap-python").setup(os_module.getenv("HOME") .. "/pyvenv/debug3.11/bin/python3")
 
 vim.keymap.set("n", "<leader>du", function()
-  ui.open()
+	ui.open()
 end, { desc = "Open dap-ui" })
 vim.keymap.set("n", "<leader>dt", function()
-  dap.toggle_breakpoint()
+	dap.toggle_breakpoint()
 end, { desc = "Toggle Breakpoint" })
 vim.keymap.set("n", "<leader>dc", function()
-  dap.continue()
+	dap.continue()
 end, { desc = "Continue" })
 vim.keymap.set("n", "<leader>dq", function()
-  ui.close()
+	ui.close()
 end, { desc = "Quit Debugging" })

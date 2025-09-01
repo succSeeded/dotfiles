@@ -53,6 +53,7 @@ window#waybar {
 
 #workspaces button.urgent {
   color: #fcb001;
+  text-shadow: 0px 0px 4px rgba(252, 176, 1, 0.6);
 
   transition: all 0.3s linear;
 }
@@ -60,12 +61,6 @@ window#waybar {
 #workspaces button.active:hover {
   box-shadow: none;
   text-shadow: 0px 0px 4px rgba(250, 250, 250, 0.6);
-
-  transition: all 0.3s linear;
-}
-
-#workspaces button.urgent:hover {
-  text-shadow: 0px 0px 4px rgba(252, 176, 1, 0.6);
 
   transition: all 0.3s linear;
 }

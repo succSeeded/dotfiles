@@ -1,8 +1,10 @@
 
+export EDITOR="nvim"
 export ZSH="$HOME/.oh-my-zsh"
 
 plugins=(
   git
+  fzf-zsh-plugin
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
