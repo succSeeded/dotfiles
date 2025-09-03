@@ -1,89 +1,40 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-$os\
-$directory\
+[╭─](bold 250)$directory\
 $git_branch\
 $git_status\
 $fill\
 $status\
-$cmd_duration\
-$java\
 $python\
+$rust\
 $nodejs\
-$c\
-$bun\
-$dotnet\
-$deno\
+$cpp\
 $sudo\
-$time\
 $shell\
-$username\
-$hostname \
 $line_break\
-$character\
+[╰─](bold 250)$character\
 """
 add_newline = false
 
-[os]
-format = '[$symbol ]($style)'
-style = 'bold white'
-disabled = true
-
-[os.symbols]
-Alpine = ' '
-Amazon = ' '
-Android = ' '
-Arch = ' '
-CentOS = ' '
-Debian = ' '
-EndeavourOS = ' '
-Fedora = ' '
-FreeBSD = ' '
-Garuda = ' '
-Gentoo = ' '
-Linux = ' '
-Macos = ' '
-Manjaro = ' '
-Mariner = ' '
-Mint = ' '
-NetBSD = ' '
-NixOS = ' '
-OpenBSD = ' '
-OpenCloudOS = ' '
-openEuler = ' '
-openSUSE = ' '
-OracleLinux = '⊂⊃'
-Pop = ' '
-Raspbian = ' '
-Redhat = ' '
-RedHatEnterprise = ' '
-Solus = ' '
-SUSE = ' '
-Ubuntu = ' '
-Unknown = ' '
-Windows = ' '
-
 [directory]
-#   📂     |
-format = '[   $path]($style)[$read_only]($read_only_style) '
-style = 'bold bright-cyan'
+format = '[   $path]($style)[ $read_only]($read_only_style) '
+style = 'bold 218'
 read_only_style = 'red'
 home_symbol = "~"
 truncation_symbol = '.../'
 truncation_length = 4
-read_only = ' 🔒'
+read_only = '󰍁 '
 use_os_path_sep = true
 truncate_to_repo = true
 
 [git_branch]
 format = """
-[$symbol$branch]($style)\
-[(:$remote_name/$remote_branch)]($style)\
+[󰊤 ](bold 250)[ $symbol$branch(:$remote_name/$remote_branch)]($style)\
 """
 #               |
 symbol = ' '
-style = 'bold purple'
+style = 'bold 153'
 always_show_remote = false
 disabled = false
 
@@ -94,9 +45,6 @@ untracked ='?'
 staged ='+'
 modified = '!'
 deleted = 'x'
-
-# untracked:'?'; staged:'+'; modified:'!'; deleted:'x';
-#windows_starship = '/mnt/c/Users/username/scoop/apps/starship/current/starship.exe'
 
 [fill]
 symbol = ' '
@@ -121,14 +69,22 @@ format = '[☗](bright-red)[ $duration]($style) '
 style = 'bold yellow'
 min_time = 2000
 show_milliseconds = false
+disabled = true
+
+[cpp]
+disabled = false
+format = '[$name $version]($style) '
 
 [python]
-format = '[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style) '
-symbol = '󰌠 ' # 󰌠  🐍 👾  |
-style = 'bright-purple'
+format = '[$symbol${pyenv_prefix}(${version})(\($virtualenv\))]($style) '
+symbol = '󰌠 '
+style = 'bold bright-yellow'
 #detect_files = [['.python-version', 'Pipfile', '__init__.py', 'pyproject.toml', 'requirements.txt', 'setup.py', 'tox.ini', 'pixi.toml']]
 version_format = '${major}.${minor}'
 disabled = false
+
+[rust]
+format = '[󱘗 $version](202 bold) '
 
 [aws]
 # 'on [$symbol($profile )(\($region\) )(\[$duration\] )]($style)'
@@ -140,22 +96,14 @@ disabled = true
 [sudo]
 #           |
 format = '[$symbol]($style)'
-symbol = '  '
+symbol = ' '
 style = 'bold 9'
 allow_windows = true
 disabled = false
 
-[time]
-#  🕙                  |
-format = '[](bold 248)[  $time]($style) '
-style = 'bold bright-cyan'
-time_format = '%H:%M'
-use_12hr = false
-disabled = true 
-
 [shell] #      _ |
-format = '[  $indicator]($style) '
-style = 'bold blue'
+format = '[_ $indicator]($style) '
+style = 'bold 183'
 unknown_indicator = '???'
 powershell_indicator = 'pwsh'
 fish_indicator = 'fish'
@@ -165,7 +113,7 @@ disabled = false
 
 [username]
 #           |
-format = '[ $user]($style)'
+format = '[](bold 250)[ $user]($style)'
 style_user = 'bold yellow'
 style_root = 'bold red'
 show_always = true
@@ -177,15 +125,11 @@ style = 'bold green'
 ssh_only = true
 trim_at = ''
 aliases = { "loganmac.local" = "mac" }
-# detect_env_vars = ['!TMUX', 'SSH_CONNECTION']
-disabled = false
+disabled = true
 
 [character]
-format = ' $symbol '
-#success_symbol = '[](fg:bold light_green)'
-#success_symbol = '[☍](fg:bold light_green)'
-#success_symbol = '[☡](fg:bold light_green)'
-success_symbol = '[](bold green)'
+format = '$symbol '
+success_symbol = '[](bold 250)'
 error_symbol = '[✘](bold red)'
-vimcmd_symbol = '[V](bold green)'
+vimcmd_symbol = '[V](bold 250)'
 
