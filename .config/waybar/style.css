@@ -75,6 +75,7 @@ window#waybar {
 #cpu,
 #memory,
 #network,
+#bluetooth,
 #language,
 #pulseaudio,
 #network {

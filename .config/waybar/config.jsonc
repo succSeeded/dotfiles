@@ -9,5 +9,5 @@
     "include": ["~/.config/waybar/modules.jsonc"],
     "modules-left": ["custom/power", "hyprland/workspaces"],
     "modules-center": ["clock"],
-	  "modules-right": ["tray", "network", "pulseaudio", "hyprland/language", "custom/swaync"]
+	  "modules-right": ["tray", "network", "bluetooth", "pulseaudio", "hyprland/language", "custom/swaync"]
 }
