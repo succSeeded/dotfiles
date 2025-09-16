@@ -1,0 +1,16 @@
+show=drun
+term=kitty
+show_all=true
+gtk_dark=false
+hide_scroll=false
+location=center
+insensitive=true
+allow_markup=true
+allow_images=true
+line_wrap=off
+image_size=32
+lines=6
+no_actions=true
+prompt=   Wofi Search
+dynamic_lines=true
+hide_scroll=false
