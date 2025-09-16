@@ -52,7 +52,7 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/AUR_Packages/zsh-interactive-cd/zsh-interactive-cd.plugin.zsh
+source $HOME/git_pkgs/zsh-interactive-cd/zsh-interactive-cd.plugin.zsh
 
 STARSHIP_CONFIG="$HOME/.config/starship.toml"
 eval "$(starship init zsh)"
