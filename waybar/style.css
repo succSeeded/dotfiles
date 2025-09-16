@@ -134,3 +134,22 @@ tooltip label {
   border: 1px solid white;
   border-radius: 10px;
 }
+
+/* Popup menus gtk theming */
+menu {
+  border-radius: 10px;
+  padding: 2px 5px 2px 5px;
+  background: #444444;
+  color: #eff3f7;
+}
+
+menuitem {
+  border-radius: 15px;
+  padding: 5px 0px 5px 0px;
+  margin: 2px 0px 2px 0px;
+}
+
+menuitem:hover {
+  background-color: #777777;
+  transition: all 0.2s ease-in-out;
+}
