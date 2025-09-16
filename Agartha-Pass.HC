@@ -1,4 +1,5 @@
-\*Copyright Azerbajan Techonology, 85000 BC, written by the CEO himself during finno-korean hyperwars
+\*
+Copyright Azerbaijan Techonology, 85000 BC, written by the CEO himself during finno-korean hyperwars
 Welcome to Agartha
 Welcome to Agartha
 Welcome to Agartha
