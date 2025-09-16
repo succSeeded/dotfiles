@@ -4,9 +4,7 @@
 pkill waybar
 hyprctl dispatch exec waybar
 
-#Reload swaync
-swaync-client -C
-swaync-client -rs
-swaync-client -R
+#Reload mako
+makoctl reload
 
 notify-send "peenar" -A "boop" -t 5000
