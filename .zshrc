@@ -1,5 +1,4 @@
-
-export FZF_DEFAULT_COMMAND="find -type f"
+export FZF_DEFAULT_COMMAND="fd --type file"
 export FZF_DEFAULT_OPTS="--style full \
   --border --padding 1,2 --preview 'if [ -d {} ]; then ls --color -l {}; else bat --style=numbers --color=always {}; fi'\
   --bind 'focus:transform-header:file --brief {}'"
@@ -46,13 +45,12 @@ ZSH_HIGHLIGHT_STYLES[back-dollar-quoted-argument]="${sub1_color},bold"
 # oh-my-zsh plugins go here, dummy
 plugins=(
   git
-  fzf-zsh-plugin
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
 
+source <(fzf --zsh) # fzf keaybinds & integration
 source $ZSH/oh-my-zsh.sh
-source $HOME/git_pkgs/zsh-interactive-cd/zsh-interactive-cd.plugin.zsh
 
 STARSHIP_CONFIG="$HOME/.config/starship.toml"
 eval "$(starship init zsh)"
