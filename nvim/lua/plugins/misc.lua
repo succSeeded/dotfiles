@@ -1,52 +1,61 @@
 return {
-	-- Cool editing prompts
+	-- comments etc.
 	{
-		"stevearc/dressing.nvim",
-		lazy = false,
-		opts = {},
-	},
-	{
-		"mason-org/mason-lspconfig.nvim",
-		opts = {},
-		dependencies = {
-			{ "mason-org/mason.nvim", opts = {} },
-			"neovim/nvim-lspconfig",
-		},
-	},
-	{
-		"mason-org/mason.nvim",
-		dependencies = { "mason-org/mason-registry" },
-		opts = {
-			ensure_installed = {
-				"black",
-				"clangd",
-				"clang-format",
-				"codelldb",
-				"cpplint",
-				"css-lsp",
-				"html-lsp",
-				"pyright",
-				"prettier",
-				"stylua",
-				"lua-language-server",
-				"pylint",
-				"prettypst",
-				"tinymist",
-			},
-		},
-	},
-	{
-		"nvim-treesitter/nvim-treesitter",
-		dependencies = { "OXY2DEV/markview.nvim" },
-		lazy = false,
-	},
-	{
-		"iamcco/markdown-preview.nvim",
-		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-		build = "cd app && yarn install",
-		init = function()
-			vim.g.mkdp_filetypes = { "markdown" }
+		'nvim-mini/mini.nvim',
+		version = false,
+		config = function()
+			require('mini.pick').setup()
+			require('mini.comment').setup()
+			require('mini.completion').setup()
+			require('mini.move').setup()
+			require('mini.clue').setup()
+			require('mini.git').setup()
+			require('mini.surround').setup()
+			require('mini.fuzzy').setup()
 		end,
-		ft = { "markdown" },
 	},
+
+	{
+		'chomosuke/typst-preview.nvim',
+		opts = {}
+	},
+
+	-- color scheme
+	{
+		"fynnfluegge/monet.nvim",
+		name = 'monet',
+		config = function()
+			require("monet").setup {
+				transparent_background = true,
+				semantic_tokens = true,
+				dark_mode = true,
+				highlight_overrides = {},
+				color_overrides = {},
+				styles = {},
+			}
+			vim.cmd("colorscheme monet")
+		end,
+	},
+
+	-- Custom statusline
+	{
+		'nvim-lualine/lualine.nvim',
+		dependencies = { 'nvim-tree/nvim-web-devicons' },
+		config = function()
+			require("lualine").setup {
+				options = {
+					theme = "OceanicNext",
+					globalstatus = false,
+				},
+				sections = {
+					lualine_a = { "mode" },
+					lualine_b = { "branch", "filename" },
+					lualine_c = { "diagnostics" },
+					lualine_x = { "diff", "spaces", "filetype" },
+					lualine_y = { "location" },
+					lualine_z = { "progress" },
+				},
+			}
+		end,
+	}
 }
