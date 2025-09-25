@@ -19,8 +19,6 @@ vim.o.showbreak = "+++ "
 -- disable mouse support
 vim.o.mouse = ""
 
-vim.o.shell = "/usr/bin/zsh"
-
 vim.o.number = true
 vim.o.relativenumber = true
 
