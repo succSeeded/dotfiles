@@ -41,6 +41,12 @@ ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]="${sub1_color},bold"
 ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]="${sub1_color},bold"
 ZSH_HIGHLIGHT_STYLES[back-dollar-quoted-argument]="${sub1_color},bold"
 
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#808080"
+
+ZSH_AUTOSUGGEST_STRATEGY=(
+	completion
+	history
+)
 
 # oh-my-zsh plugins go here, dummy
 plugins=(
@@ -54,3 +60,4 @@ source $ZSH/oh-my-zsh.sh
 
 STARSHIP_CONFIG="$HOME/.config/starship.toml"
 eval "$(starship init zsh)"
+

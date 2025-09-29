@@ -7,7 +7,4 @@
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-
-eval "$(starship init bash)"
-
-. "$HOME/.cargo/env"
+PS1='[\u@\h \W]\$ '
