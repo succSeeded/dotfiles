@@ -19,7 +19,7 @@ window#waybar {
 }
 
 #workspaces {
-  padding: 0px 2px;
+  padding: 0px 5px 0px 2px;
   margin: 4px 10px;
   border-radius: 15px;
   border: none;
@@ -108,7 +108,7 @@ window#waybar {
   border-radius: 15px;
 
   padding-right: 16px;
-  padding-left: 9px;
+  padding-left: 11px;
 
   margin: 3px 0px 3px 5px;
   transition: all 0.3s linear;

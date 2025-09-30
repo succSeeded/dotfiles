@@ -48,26 +48,6 @@
 // Resource monitoring
 // -------------------------------------------------------------------------
 
-    "cpu": {
-        "interval": 10,
-        "format": "  {usage}%", // Icon: microchip: 
-        "states": {
-            "warning": 70,
-            "critical": 90
-        },
-        "on-click": "kitty btop"
-    },
-
-    "memory": {
-        "interval": 10,
-        "format": "MEM: {}%", // Icon: memory
-        "states": {
-            "warning": 70,
-            "critical": 90
-        },
-        "on-click": "kitty btop"
-    },
-
     "network": {
         "interval": 30,
         "format-wifi": "", // Icon: wifi
@@ -109,7 +89,7 @@
 // -------------------------------------------------------------------------
 
     "custom/power": {
-        "format": "", // arch icon
+        "format": "", // hyprland icon
         "tooltip": false,
         "menu": "on-click",
         "menu-file": "~/.config/waybar/power-menu.xml",
