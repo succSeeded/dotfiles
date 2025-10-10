@@ -94,11 +94,11 @@
         "menu": "on-click",
         "menu-file": "~/.config/waybar/power-menu.xml",
         "menu-actions": {
-            "shutdown": "systemctl shutdown",
+            "shutdown": "systemctl poweroff",
             "reboot": "systemctl reboot",
             "suspend": "systemctl suspend",
             "hibernate": "systemctl hibernate",
-						"logout": "exit"
+						"logout": "hyprctl dispatch exit"
         }
     }
 }
