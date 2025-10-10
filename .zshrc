@@ -4,6 +4,7 @@ export FZF_DEFAULT_OPTS="--style full \
   --bind 'focus:transform-header:file --brief {}'"
 export EDITOR="nvim"
 export ZSH="$HOME/.oh-my-zsh"
+export PATH=$HOME/.config/scripts:$PATH
 
 
 # ==================================
@@ -55,7 +56,7 @@ plugins=(
   zsh-syntax-highlighting
 )
 
-source <(fzf --zsh) # fzf keaybinds & integration
+source <(fzf --zsh) # fzf keybinds & integration
 source $ZSH/oh-my-zsh.sh
 
 STARSHIP_CONFIG="$HOME/.config/starship.toml"
