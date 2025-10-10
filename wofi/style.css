@@ -6,14 +6,12 @@
 
 window {
   border-radius: 15px;
-  padding: 16px;
   border: none;
   font-size: 24px;
   font-family: "Futura Std";
 
   color: #eff3f7;
   background-color: alpha(#444444, 0.6);
-  /* box-shadow: 0px 10px 20px #000000; */
 }
 
 #outer-box {

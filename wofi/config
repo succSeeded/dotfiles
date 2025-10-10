@@ -13,4 +13,4 @@ lines=6
 no_actions=true
 prompt=   Wofi Search
 dynamic_lines=true
-hide_scroll=false
+hide_scroll=true
