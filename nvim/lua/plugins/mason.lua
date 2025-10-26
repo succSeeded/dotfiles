@@ -16,7 +16,7 @@ return {
 				"rust_analyzer",
 				"pyright",
 				"tinymist",
-				"ts_ls"
+				"ts_ls",
 			},
 			automatic_installation = true,
 		},

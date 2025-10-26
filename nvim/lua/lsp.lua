@@ -3,6 +3,7 @@ vim.lsp.enable({
 	"clangd",
 	"rust-analyzer",
 	"pyright",
+	"r_langugage_server"
 })
 
 vim.diagnostic.config { virtual_lines = true }

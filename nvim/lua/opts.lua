@@ -1,4 +1,4 @@
-vim.o.winborder = "rounded"
+vim.o.winborder = 'rounded'
 
 vim.o.tabstop = 2
 vim.o.shiftwidth = 2
