@@ -6,6 +6,7 @@ export EDITOR="nvim"
 export ZSH="$HOME/.oh-my-zsh"
 export PATH=$HOME/.config/scripts:$PATH
 
+alias icat="kitten icat"
 
 # ==================================
 # = zsh syntax highlighting tweaks =
