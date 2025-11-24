@@ -46,8 +46,8 @@ ZSH_HIGHLIGHT_STYLES[back-dollar-quoted-argument]="${sub1_color},bold"
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#808080"
 
 ZSH_AUTOSUGGEST_STRATEGY=(
-	completion
 	history
+	completion
 )
 
 # oh-my-zsh plugins go here, dummy

@@ -1,5 +1,5 @@
 {
-    "layer": "top",
+    "layer": "bottom",
     "position": "top",
     "margin": "4px 4px 0px",
     "fixed center": true,
