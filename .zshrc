@@ -4,7 +4,8 @@ export FZF_DEFAULT_OPTS="--style full \
   --bind 'focus:transform-header:file --brief {}'"
 export EDITOR="nvim"
 export ZSH="$HOME/.oh-my-zsh"
-export PATH=$HOME/.config/scripts:$PATH
+export PATH="$HOME/.config/scripts:$PATH"
+export XDG_DATA_HOME="$HOME/.local/share"
 
 alias icat="kitten icat"
 
@@ -55,6 +56,7 @@ plugins=(
   git
   zsh-autosuggestions
   zsh-syntax-highlighting
+	poetry
 )
 
 source <(fzf --zsh) # fzf keybinds & integration
@@ -63,3 +65,13 @@ source $ZSH/oh-my-zsh.sh
 STARSHIP_CONFIG="$HOME/.config/starship.toml"
 eval "$(starship init zsh)"
 
+
+# Created by `pipx` on 2025-12-05 00:41:07
+export PATH="$PATH:/home/jilezka/.local/bin"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.poetry/bin:$PATH"
+
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
