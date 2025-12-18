@@ -1,5 +1,5 @@
 set selection-clipboard clipboard
 set recolor "true"
 set default-bg rgb(39,39,39)
-set recolor-lightcolor rgb(36,38,46)
+set recolor-lightcolor rgb(39,39,39)
 set adjust-open "width"

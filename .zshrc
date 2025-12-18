@@ -68,10 +68,13 @@ eval "$(starship init zsh)"
 
 # Created by `pipx` on 2025-12-05 00:41:07
 export PATH="$PATH:/home/jilezka/.local/bin"
+
+# poetry stuff
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.poetry/bin:$PATH"
 
-
+# pyenv setup
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 eval "$(pyenv init - zsh)"
