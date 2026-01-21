@@ -11,6 +11,6 @@ line_wrap=off
 image_size=32
 lines=6
 no_actions=true
-prompt=   Wofi Search
+prompt=    Wofi Search
 dynamic_lines=true
 hide_scroll=true
