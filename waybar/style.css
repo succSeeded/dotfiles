@@ -75,12 +75,16 @@ window#waybar {
 #cpu,
 #memory,
 #network,
-#bluetooth,
 #language,
 #pulseaudio,
 #network {
   padding-left: 15px;
   padding-right: 15px;
+}
+
+#bluetooth {
+	padding-left: 20px;
+	padding-right: 14px;
 }
 
 #clock {
