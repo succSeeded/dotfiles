@@ -5,9 +5,9 @@
     "fixed center": true,
     "reload_style_on_change": true,
 	  "height": 42,
-    "width": 700,
+    "width": 800,
     "include": ["~/.config/waybar/modules.jsonc"],
     "modules-left": ["custom/power", "hyprland/workspaces"],
     "modules-center": ["clock"],
-	  "modules-right": ["tray", "network", "bluetooth", "pulseaudio", "hyprland/language", "custom/swaync"]
+	  "modules-right": ["tray", "network", "bluetooth", "pulseaudio", "hyprland/language", "custom/notifications"]
 }

@@ -54,16 +54,15 @@
         "format-ethernet": "󰈀", // Icon: ethernet
         "format-linked": "{ifname} (No IP)",
         "format-disconnected": "󰖪 ",
-        "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({bandwidthDownBytes})</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>",
-        "tooltip-format-ethernet": "Network: <big><b>Ethernet</b></big>\nSignal strength: <b>{signaldBm}dBm ({bandwidthDownBytes})</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>",
+				"tooltip": false,
         "on-click": "hyprctl dispatch exec [float] kitty impala"
     },
 
     "bluetooth": {
       "format": "",
-      "format-disconnected": "󰂲",
-      "tooltip-format": "Controller: {controller_alias}\nDevice: {device_alias}",
-      "on-click": "hyprctl dispatch exec [float] kitty bluetui"
+			"format-disconnected": "󰂲",
+      "tooltip": false,
+			"on-click": "hyprctl dispatch exec [float] kitty bluetui"
     },
 
     "pulseaudio": {
@@ -73,15 +72,15 @@
             "headphones": "",
             "default": ["", ""]
         },
-        "tooltip-format": "{desc}: {volume}%",
         "scroll-step": 5,
+				"tooltip": false,
         "on-click": "pavucontrol"
     },
 
-    "custom/swaync": {
+    "custom/notifications": {
         "format": "",
-        "tooltip": false,
-        "on-click": "swaync-client -t"
+        "tooltip": true,
+        "on-click": "makoctl mode -t do-not-disturb"
     },
 
 // -------------------------------------------------------------------------

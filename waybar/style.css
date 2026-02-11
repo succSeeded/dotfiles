@@ -95,7 +95,7 @@ window#waybar {
   padding-top: 1px;
 }
 
-#custom-swaync {
+#custom-notifications {
   padding-left: 5px;
   padding-right: 25px;
 }
@@ -130,30 +130,35 @@ tooltip {
 }
 
 tooltip label {
-  font-family: Iosevka Nerd Font;
+	font-family: Iosevka Nerd Font;
   font-size: 16px;
 
-  background-color: rgba(36, 38, 46, 0.8);
+  text-shadow: none;
+	background-color: #eff3f7;
+	color: #444444;
   padding: 10px;
-  border: 1px solid white;
   border-radius: 10px;
 }
 
 /* Popup menus gtk theming */
 menu {
-  border-radius: 10px;
+	border-radius: 10px;
   padding: 2px 5px 2px 5px;
-  background: #444444;
-  color: #eff3f7;
+  background: #eff3f7;
+  color: #444444;
 }
 
 menuitem {
-  border-radius: 15px;
+	border-radius: 6px;
   padding: 5px 0px 5px 0px;
   margin: 2px 0px 2px 0px;
 }
 
+menuitem label {
+	font-family: Iosevka Nerd Font;
+}
+
 menuitem:hover {
-  background-color: #777777;
+  background-color: #d8d8d8;
   transition: all 0.2s ease-in-out;
 }
