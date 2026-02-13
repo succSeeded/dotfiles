@@ -15,3 +15,6 @@ history=1
 markup=1
 default-timeout=5000
 ignore-timeout=0
+
+[mode=do-not-disturb]
+invisible=1

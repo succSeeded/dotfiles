@@ -1,6 +1,7 @@
 show=drun
 term=kitty
 show_all=true
+width=500
 gtk_dark=false
 hide_scroll=false
 location=center

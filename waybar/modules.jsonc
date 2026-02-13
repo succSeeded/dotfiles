@@ -78,9 +78,13 @@
     },
 
     "custom/notifications": {
-        "format": "",
+        "interval": "once",
+				"return-type": "json",
+				"format": "{text}",
         "tooltip": true,
-        "on-click": "makoctl mode -t do-not-disturb"
+				"tooltip-format": "Toggle \"Do Not Disturb\" mode",
+				"exec": "bash ~/.config/waybar/scripts/dnd.sh",
+				"on-click": "makoctl mode -t do-not-disturb && bash ~/.config/waybar/scripts/dnd.sh"
     },
 
 // -------------------------------------------------------------------------
