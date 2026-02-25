@@ -12,5 +12,6 @@ cp -r ${HOME}/.config/gtk\-4\.0 ${HOME}/cloned-repos/dotfiles
 cp -r ${HOME}/.config/gtk\-3\.0 ${HOME}/cloned-repos/dotfiles
 cp -r ${HOME}/.config/index.theme ${HOME}/cloned-repos/dotfiles
 cp -r $HOME/.config/scripts $HOME/cloned-repos/dotfiles
+cp -r ${HOME}/.config/Wallpapers ${HOME}/cloned-repos/dotfiles
 cp ${HOME}/.bashrc ${HOME}/cloned-repos/dotfiles
 cp ${HOME}/.zshrc ${HOME}/cloned-repos/dotfiles
