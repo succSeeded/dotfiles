@@ -9,7 +9,7 @@
         "calendar": {
             "on-scroll" : 1,
             "format": {
-                "months": "<span color='#ffead3'><b>{}</b></span>",
+                "months": "<span color='#ffbf75'><b>{}</b></span>",
                 "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
                 "today": "<span color='#bd93f9'><b><u>{}</u></b></span>"
             }
