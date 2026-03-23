@@ -56,7 +56,6 @@ plugins=(
   git
   zsh-autosuggestions
   zsh-syntax-highlighting
-	poetry
 )
 
 source <(fzf --zsh) # fzf keybinds & integration
