@@ -19,9 +19,6 @@ vim.o.showbreak = "+++ "
 -- disable mouse support
 vim.o.mouse = ""
 
--- disable THE FUCKASS TERMINAL BELL
-vim.opt.belloff = 'all'
-
 vim.o.number = true
 vim.o.relativenumber = true
 

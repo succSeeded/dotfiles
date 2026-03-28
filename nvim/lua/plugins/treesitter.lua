@@ -1,26 +1,24 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
-	opts = {
-		branch = 'master',
-		lazy = false,
-		build = ":TSUpdate",
-		ensure_installed = {
-			"c",
-			"cpp",
-			"rust",
-			"python",
-			"lua",
-			"vim",
-			"vimdoc",
-			"query",
-			"markdown",
-			"markdown_inline",
-			"css",
-			"html",
-			"javascript",
-			"typescript"
-		},
-		highlight = { enable = true },
-		indent = { enable = true }
-	}
+	lazy = false,
+	branch = 'master',
+	build = ":TSUpdate",
+	config = function()
+		require 'nvim-treesitter.configs'.setup({
+			ensure_installed = {
+				"c",
+				"bash",
+				"lua",
+				"markdown",
+				"python",
+				"query",
+				"rust",
+				"vim"
+			},
+			auto_install = true,
+			additional_vim_regex_highlighting = true,
+			highlight = { enable = true },
+			indent = { enable = true }
+		})
+	end
 }
