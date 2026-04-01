@@ -29,29 +29,11 @@ return {
 		opts = {}
 	},
 
-	-- color scheme
-	-- {
-	-- 	"fynnfluegge/monet.nvim",
-	-- 	name = 'monet',
-	-- 	config = function()
-	-- 		require("monet").setup {
-	-- 			transparent_background = true,
-	-- 			semantic_tokens = true,
-	-- 			dark_mode = true,
-	-- 			highlight_overrides = {},
-	-- 			color_overrides = {},
-	-- 			styles = {},
-	-- 		}
-	-- 		vim.cmd("colorscheme monet")
-	-- 	end,
-	-- },
-
 	-- Custom statusline
 	{
 		'nvim-lualine/lualine.nvim',
 		dependencies = { 'nvim-tree/nvim-web-devicons' },
-		config = function()
-			require("lualine").setup {
+		opts =  {
 				options = {
 					theme = "OceanicNext",
 					globalstatus = false,
@@ -65,6 +47,5 @@ return {
 					lualine_z = { "progress" },
 				},
 			}
-		end,
 	},
 }

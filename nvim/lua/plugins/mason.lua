@@ -1,19 +1,7 @@
 return {
 	{
 		"mason-org/mason.nvim",
-		opts = {
-			ensure_installed = {
-				"lua_ls",
-				"clangd",
-				"rust_analyzer",
-				"pyright",
-				"tinymist",
-				"ts_ls",
-				"stylua",
-				"ruff"
-			},
-			automatic_installation = true,
-		},
+		opts = {},
 	},
 	{
 		"mason-org/mason-lspconfig.nvim",
@@ -21,5 +9,16 @@ return {
 			"mason-org/mason.nvim",
 			"neovim/nvim-lspconfig",
 		},
-	}
+		opts = {
+			ensure_installed = {
+				"clangd",
+				"lua_ls",
+				"rust_analyzer",
+				"ruff",
+				"tinymist",
+				"stylua",
+			},
+			automatic_installation = true,
+		},
+	},
 }

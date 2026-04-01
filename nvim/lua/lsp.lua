@@ -1,9 +1,9 @@
 vim.lsp.enable({
-	"lua_ls",
 	"clangd",
+	"lua_ls",
+	"pyright",
 	"rust-analyzer",
-	"ruff",
-	"r_langugage_server",
+	"tinymist",
 })
 
 vim.diagnostic.config({ virtual_lines = true })

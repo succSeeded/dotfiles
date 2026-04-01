@@ -1,13 +1,13 @@
 -- Things that will be done as soon as nvim starts. Mostly for plugin startup and bg removal rn.
 
-vim.api.nvim_create_autocmd('LspAttach', {
+vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(ev)
 		local client = assert(vim.lsp.get_client_by_id(ev.data.client_id))
 
 		if client:supports_method(vim.lsp.protocol.Methods.textDocument_completion) then
-			vim.opt.completeopt = { 'menu', 'menuone', 'noinsert', 'fuzzy', 'popup' }
+			vim.opt.completeopt = { "menu", "menuone", "noinsert", "fuzzy", "popup" }
 			vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
-			vim.keymap.set('i', '<C-Space>', function()
+			vim.keymap.set("i", "<C-Space>", function()
 				vim.lsp.completion.get()
 			end)
 		end
@@ -34,7 +34,23 @@ vim.api.nvim_create_autocmd("VimEnter", {
 		vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
 
 		-- Italic comments
-		local comments = vim.api.nvim_get_hl(0, { name = 'Comment' })
-		vim.api.nvim_set_hl(0, 'Comment', vim.tbl_extend("force", comments, { italic = true }))
+		local comments = vim.api.nvim_get_hl(0, { name = "Comment" })
+		vim.api.nvim_set_hl(0, "Comment", vim.tbl_extend("force", comments, { italic = true }))
+	end,
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = { "c", "cpp", "lua", "latex", "markdown", "python", "rust", "typst" },
+	callback = function()
+		-- syntax highlighting, provided by Neovim
+		vim.treesitter.start()
+
+		vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+		vim.opt.foldmethod = "expr"
+		-- start with all folds open
+		vim.opt.foldlevel = 99
+
+		-- indentation, provided by nvim-treesitter
+		vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
 	end,
 })
